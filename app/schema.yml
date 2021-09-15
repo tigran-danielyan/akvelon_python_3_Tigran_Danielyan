@@ -1,0 +1,172 @@
+openapi: 3.0.3
+info:
+  title: Transaction Manager API
+  version: 3.0.0
+  description: Transaction Manager
+servers:
+- url: http://127.0.0.1:8080
+
+paths:
+  /transactions/api/v1/transactions/:
+    get:
+      operationId: transactions_api_v1_transactions_retrieve
+      description: ''
+      tags:
+      - transactions
+      responses:
+        '200':
+          description: No response body
+  /users/api/v1/users/:
+    post:
+      operationId: users_api_v1_users_create
+      description: ''
+      tags:
+      - users
+      responses:
+        '201':
+          description: No response body
+  /users/api/v1/users/{user_id}/:
+    get:
+      operationId: users_api_v1_users_retrieve
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+    patch:
+      operationId: users_api_v1_users_partial_update
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+    delete:
+      operationId: users_api_v1_users_destroy
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '204':
+          description: No response body
+  /users/api/v1/users/{user_id}/grouped-transactions/:
+    get:
+      operationId: users_api_v1_users_grouped_transactions_retrieve
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+  /users/api/v1/users/{user_id}/transactions/:
+    get:
+      operationId: users_api_v1_users_transactions_retrieve
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+    post:
+      operationId: users_api_v1_users_transactions_create
+      description: ''
+      parameters:
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '201':
+          description: No response body
+  /users/api/v1/users/{user_id}/transactions/{transaction_id}:
+    get:
+      operationId: users_api_v1_users_transactions_retrieve_2
+      description: ''
+      parameters:
+      - in: path
+        name: transaction_id
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+    patch:
+      operationId: users_api_v1_users_transactions_partial_update
+      description: ''
+      parameters:
+      - in: path
+        name: transaction_id
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '200':
+          description: No response body
+    delete:
+      operationId: users_api_v1_users_transactions_destroy
+      description: ''
+      parameters:
+      - in: path
+        name: transaction_id
+        schema:
+          type: integer
+        required: true
+      - in: path
+        name: user_id
+        schema:
+          type: integer
+        required: true
+      tags:
+      - users
+      responses:
+        '204':
+          description: No response body

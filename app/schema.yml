@@ -10,9 +10,26 @@ paths:
   /transactions/api/v1/transactions/:
     get:
       operationId: transactions_api_v1_transactions_retrieve
-      description: ''
+      description: 'Returns all transactions'
       tags:
       - transactions
+      parameters:
+        - in: query
+          name: date_after
+          schema:
+            type: string
+          description: date after the results should be returned
+        - in: query
+          name: date_before
+          schema:
+            type: string
+          description: date before the results should be returned
+        - in: query
+          name: method
+          schema:
+            type: int
+          description: transaction type (0 for income 1 for withdrawal)
+
       responses:
         '200':
           description: No response body

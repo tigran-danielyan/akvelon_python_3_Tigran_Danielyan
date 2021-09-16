@@ -5,6 +5,7 @@ info:
   description: Transaction Manager
 servers:
 - url: https://transaction-task-manager.herokuapp.com/
+- url: http://127.0.0.1:8080/
 
 paths:
   /transactions/api/v1/transactions/:

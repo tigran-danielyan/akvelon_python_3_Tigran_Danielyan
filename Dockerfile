@@ -12,5 +12,4 @@ ENV PYTHONIOENCODING=utf-8 \
 
 WORKDIR /app
 
-# execute the app
-CMD ["/usr/local/bin/gunicorn", "-w", "3", "transaction_manager.wsgi", "-b", "0.0.0.0:8000"]
+ENTRYPOINT ["sh", "./entrypoint.sh"]

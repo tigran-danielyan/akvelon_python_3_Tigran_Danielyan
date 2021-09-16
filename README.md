@@ -19,5 +19,10 @@ For running project tests:
 
     $ make test
 
+####In production the project is on https://transaction-task-manager.herokuapp.com/ domain
+
+
+####For Swagger configuration have a look at /app/schema.yml 
+
     
     

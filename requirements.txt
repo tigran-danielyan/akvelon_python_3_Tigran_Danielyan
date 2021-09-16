@@ -2,17 +2,12 @@ django==3.2.6
 django-cors-headers==3.7.0
 djangorestframework==3.12.4
 django-extensions==3.1.3
-django-silk==4.1.0
 django-filter==2.4.0
 drf-spectacular
-flake8==3.9.0
-factory-boy==2.11.1
 gunicorn==20.1.0
 request-id-django-log==0.2.0
 requests==2.26.0
-Pillow==8.2.0
 psycopg2-binary==2.9.1
 python-dateutil==2.8.1
 stringcase==1.2.0
-watchtower==1.0.6
 Werkzeug==1.0.1
